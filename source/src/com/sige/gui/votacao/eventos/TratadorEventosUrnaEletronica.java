@@ -87,195 +87,145 @@ public class TratadorEventosUrnaEletronica implements ActionListener {
 	 * trata os eventos de todos os botoes da urna eletronica.
 	 */
 	public void actionPerformed(ActionEvent evento) {
+		if (votou) {
+			return;
+		}
 
-		// Verifica se o usuario ja acabou de votar.
-		if (!this.votou == true) {
-
-			// Verifica se o usuario clicou no botao Branco.
-			if (evento.getSource() == gui.getBotaoBranco() ) {
-
-				// Verifica se o label Numero do Candidato e igual a 0, se sim modifica o painel para voto em branco.
-				if (gui.getNumeroCandidato().getText().trim().length() == 0) {
-					gui.getSeuVotoParaLabel().setVisible(true);
-					gui.getAperte().setVisible(true);
-					gui.getLabelLinha().setVisible(true);
-					gui.getLabelLinha2().setVisible(true);
-					gui.getLaranjaCorrige().setVisible(true);
-					gui.getVerdeConfirma().setVisible(true);
-					gui.getNumeroLabel().setText("  VOTO EM");
-					gui.getNumeroLabel().setFont(new Font(null, Font.PLAIN, 31));
-					gui.getNumeroCandidato().setText("BRANCO");
-					gui.getNumeroCandidato().setBorder(BorderFactory.createEmptyBorder());
-					gui.getNumeroCandidato().setFont(new Font(null, Font.PLAIN, 31));
-					gui.setCaminhoFoto(gui.TRANSPARENTE);
-				}
-			}
-
-			// Verifica se o evento aconteceu no votao Corrige. Se sim chama o metodo corrigeTela().
-			else if (evento.getSource() == gui.getBotaoCorrige() ) {
-				corrigeTela();
-			}
-
-			// Verifica se o usuario clicou no botao Confirma.
-			else if (evento.getSource() == gui.getBotaoConfirma()) {
-
-				// Verifica se a quantidade de cargos atual e menor que o total.
-				if ( gui.getTotalCargos() != gui.getQtdeCargos() ) {
-
-					try {
-						// Caso seja escolhido um candidato correto, a imagem do candidato sera trocada.
-						if ( !gui.getCaminhoFoto().equalsIgnoreCase(gui.TRANSPARENTE) ) {
-							tocaSom();
-
-							dataBaseVotacaoCandidatos.iniciaConexao();
-							int votos = dataBaseVotacaoCandidatos.obterVotosCandidato(gui.getNomeCandidato().getText(), gui.getDATA_VOTACAO());
-
-							if (votos == 0)
-								dataBaseVotacaoCandidatos.adicionarVotacaoCandidatos(gui.getDATA_VOTACAO(), gui.getCargos()[gui.getQtdeCargos()], gui.getNomeCandidato().getText(), votos + 1);
-							else
-								dataBaseVotacaoCandidatos.atualizarVotacaoCandidatos(gui.getNomeCandidato().getText(), votos + 1);
-							dataBaseVotacaoCandidatos.fechaConexao();
-
-							dataBaseVotacaoCargos.iniciaConexao();
-							dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO()) + 1, gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO());
-							dataBaseVotacaoCargos.fechaConexao();
-
-							if ( gui.getQtdeCargos() < gui.getTotalCargos()) {
-								gui.setQtdeCargos(gui.getQtdeCargos() + 1);
-							}
-							corrigeTela();
-						}
-
-						// Verifica se o voto e nulo.
-						else if (gui.getPartidoCandidato().getText().equalsIgnoreCase("VOTO NULO")) {
-							tocaSom();
-
-							dataBaseVotacaoCargos.iniciaConexao();
-							dataBaseVotacaoCargos.atualizarNulo(dataBaseVotacaoCargos.obterQuantidadeNulo(gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO()) + 1, gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO());
-							dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO()) + 1, gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO());
-							dataBaseVotacaoCargos.fechaConexao();
-
-							if ( gui.getQtdeCargos() < gui.getTotalCargos()) {
-								gui.setQtdeCargos(gui.getQtdeCargos() + 1);
-							}
-							corrigeTela();
-
-						}
-
-						// Verifica se o voto e Branco.
-						else if (gui.getNumeroCandidato().getText().equalsIgnoreCase("BRANCO")) {
-							tocaSom();
-
-							dataBaseVotacaoCargos.iniciaConexao();
-							dataBaseVotacaoCargos.atualizarBranco(dataBaseVotacaoCargos.obterQuantidadeBranco(gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO()) + 1, gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO());
-							dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO()) + 1, gui.getCargos()[gui.getQtdeCargos()], gui.getDATA_VOTACAO());
-							dataBaseVotacaoCargos.fechaConexao();
-
-							if ( gui.getQtdeCargos() < gui.getTotalCargos()) {
-								gui.setQtdeCargos(gui.getQtdeCargos() + 1);
-							}
-							corrigeTela();
-						}
-					} catch (Exception e) {
-						new DialogoErro(gui, "Erro", "Informe o Seguinte Erro ao Analista: " + e.toString());
-					}
-				}
-
-				// Verifica se o usuario ja votou em todos os cargos. Se sim Cria um painelFim e adiciona no painelTela.
-				if ( gui.getTotalCargos() == gui.getQtdeCargos() ) {
-					gui.getSeuVotoParaLabel().setVisible(false);
-					gui.getAperte().setVisible(false);
-					gui.getLabelLinha().setVisible(false);
-					gui.getLabelLinha2().setVisible(false);
-					gui.getLaranjaCorrige().setVisible(false);
-					gui.getVerdeConfirma().setVisible(false);
-					gui.getNumeroLabel().setVisible(false);
-					gui.getNumeroCandidato().setVisible(false);
-					gui.getCargoLabel().setVisible(false);
-
-					JPanel painelFIM = new JPanel();
-					JLabel partidoCandidato = new JLabel("FIM");
-					partidoCandidato.setFont(new Font(null, Font.BOLD, 150));
-					painelFIM.add(partidoCandidato);
-					painelFIM.setPreferredSize(new Dimension(500, 500));
-					painelFIM.setBackground(Color.LIGHT_GRAY);
-
-					GridBagConstraints c = new GridBagConstraints();
-
-					c.insets = new Insets(500, 300, 300, 150);
-					c.fill = GridBagConstraints.HORIZONTAL;
-					c.anchor = GridBagConstraints.FIRST_LINE_END;
-					c.gridx = 0;
-					c.gridy = 0;
-					gui.setPainelTela(painelFIM, c);
-
-					JPanel painelVotou = new JPanel();
-					painelVotou.setBackground(Color.LIGHT_GRAY);
-					JLabel votou = new JLabel("VOTOU");
-					votou.setFont(new Font(null, Font.PLAIN, 40));
-					painelVotou.add(votou);
-
-					c.insets = new Insets(10, 500, 187, 33);
-					c.fill = GridBagConstraints.HORIZONTAL;
-					c.anchor = GridBagConstraints.LAST_LINE_END;
-					c.gridx = 0;
-					c.gridy = 0;
-					gui.setPainelTela(painelVotou, c);
-					this.votou = true;
-				}
-			}
-
-			// Verifica se o usuario clicou no botao 0. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[0] ) {
-				trataBotoes(0);
-			}
-
-			// Verifica se o usuario clicou no botao 1. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[1] ) {
-				trataBotoes(1);
-			}
-
-			// Verifica se o usuario clicou no botao 2. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[2] ) {
-				trataBotoes(2);
-			}
-
-			// Verifica se o usuario clicou no botao 3. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[3] ) {
-				trataBotoes(3);
-			}
-
-			// Verifica se o usuario clicou no botao 4. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[4] ) {
-				trataBotoes(4);
-			}
-
-			// Verifica se o usuario clicou no botao 5. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[5] ) {
-				trataBotoes(5);
-			}
-
-			// Verifica se o usuario clicou no botao 6. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[6] ) {
-				trataBotoes(6);
-			}
-
-			// Verifica se o usuario clicou no botao 7. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[7] ) {
-				trataBotoes(7);
-			}
-
-			// Verifica se o usuario clicou no botao 8. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[8] ) {
-				trataBotoes(8);
-			}
-
-			// Verifica se o usuario clicou no botao 9. Se sim chama o tratador de botoes passando como argumento o numero dele.
-			else if (evento.getSource() == gui.getBotoesNumericos()[9] ) {
-				trataBotoes(9);
-			}
+		if (evento.getSource() == gui.getBotaoBranco()) {
+			tratarBotaoBranco();
+		} else if (evento.getSource() == gui.getBotaoCorrige()) {
+			corrigeTela();
+		} else if (evento.getSource() == gui.getBotaoConfirma()) {
+			tratarBotaoConfirma();
+		} else {
+			tratarBotoesNumericos(evento.getSource());
 		}
 	}
+
+	private void tratarBotaoBranco() {
+		if (gui.getNumeroCandidato().getText().trim().length() == 0) {
+			exibirPainelVotoBranco();
+		}
+	}
+
+	private void exibirPainelVotoBranco() {
+		gui.getSeuVotoParaLabel().setVisible(true);
+		gui.getAperte().setVisible(true);
+		gui.getLabelLinha().setVisible(true);
+		gui.getLabelLinha2().setVisible(true);
+		gui.getLaranjaCorrige().setVisible(true);
+		gui.getVerdeConfirma().setVisible(true);
+		gui.getNumeroLabel().setText("  VOTO EM");
+		gui.getNumeroLabel().setFont(new Font(null, Font.PLAIN, 31));
+		gui.getNumeroCandidato().setText("BRANCO");
+		gui.getNumeroCandidato().setBorder(BorderFactory.createEmptyBorder());
+		gui.getNumeroCandidato().setFont(new Font(null, Font.PLAIN, 31));
+		gui.setCaminhoFoto(gui.TRANSPARENTE);
+	}
+
+	private void tratarBotaoConfirma() {
+		if (gui.getTotalCargos() != gui.getQtdeCargos()) {
+			try {
+				if (!gui.getCaminhoFoto().equalsIgnoreCase(gui.TRANSPARENTE)) {
+					realizarVotoCandidato();
+				} else if (gui.getPartidoCandidato().getText().equalsIgnoreCase("VOTO NULO")) {
+					realizarVotoNulo();
+				} else if (gui.getNumeroCandidato().getText().equalsIgnoreCase("BRANCO")) {
+					realizarVotoBranco();
+				}
+			} catch (Exception e) {
+				exibirErroAnalista(e);
+			}
+		}
+
+		if (gui.getTotalCargos() == gui.getQtdeCargos()) {
+			exibirPainelFimVotacao();
+		}
+	}
+
+	private void realizarVotoCandidato() throws Exception {
+		tocaSom();
+
+		dataBaseVotacaoCandidatos.iniciaConexao();
+		int votos = dataBaseVotacaoCandidatos.obterVotosCandidato(gui.getNomeCandidato().getText(), gui.getDATA_VOTACAO());
+
+		if (votos == 0)
+			dataBaseVotacaoCandidatos.adicionarVotacaoCandidatos(gui.getDATA_VOTACAO(), gui.getCargos()[gui.getQtdeCargos()], gui.getNomeCandidato().getText(), votos + 1);
+		else
+			dataBaseVotacaoCandidatos.atualizarVotacaoCandidatos(gui.getNomeCandidato().getText(), votos + 1);
+		dataBaseVotacaoCandidatos.fechaConexao();
+
+		dataBaseVotacaoCargos.iniciaConexao();
+		dataBaseVotacaoCargos.atualizarVotacaoCargos(gui.getDATA_VOTACAO(), gui.getCargos()[gui.getQtdeCargos()], gui.getNomeCandidato().getText(), gui.getQtdeCargos() + 1);
+		dataBaseVotacaoCargos.fechaConexao();
+
+		proximoCargo();
+	}
+
+	private void realizarVotoNulo() throws Exception {
+		tocaSom();
+
+		dataBaseVotacaoCargos.iniciaConexao();
+		dataBaseVotacaoCargos.atualizarVotacaoCargos(gui.getDATA_VOTACAO(), gui.getCargos()[gui.getQtdeCargos()], "VOTO NULO", gui.getQtdeCargos() + 1);
+		dataBaseVotacaoCargos.fechaConexao();
+
+		proximoCargo();
+	}
+
+	private void realizarVotoBranco() throws Exception {
+		tocaSom();
+
+		dataBaseVotacaoCargos.iniciaConexao();
+		dataBaseVotacaoCargos.atualizarVotacaoCargos(gui.getDATA_VOTACAO(), gui.getCargos()[gui.getQtdeCargos()], "BRANCO", gui.getQtdeCargos() + 1);
+		dataBaseVotacaoCargos.fechaConexao();
+
+		proximoCargo();
+	}
+
+	private void exibirErroAnalista(Exception e) {
+		JOptionPane.showMessageDialog(gui, "Erro ao votar: " + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+	}
+
+	private void exibirPainelFimVotacao() {
+		gui.getNumeroLabel().setVisible(false);
+		gui.getNumeroCandidato().setVisible(false);
+		gui.getNomeCandidato().setVisible(false);
+		gui.getPartidoCandidato().setVisible(false);
+		gui.getFotoCandidato().setVisible(false);
+		gui.getLabelCargos().setVisible(false);
+		gui.getLabelCargosVotados().setVisible(false);
+		gui.getLabelFim().setVisible(true);
+		gui.getLabelCargos().setText("VOTAÇÃO ENCERRADA");
+		gui.getBotaoBranco().setEnabled(false);
+		gui.getBotaoCorrige().setEnabled(false);
+		gui.getBotaoConfirma().setEnabled(false);
+		gui.getBotaoSair().setVisible(true);
+	}
+
+	private void proximoCargo() {
+		gui.zerarControlesTela();
+
+		if (gui.getQtdeCargos() < gui.getTotalCargos() - 1) {
+			gui.setQtdeCargos(gui.getQtdeCargos() + 1);
+			exibirPainelCargos();
+		} else {
+			exibirPainelFimVotacao();
+		}
+	}
+
+	private void tratarBotoesNumericos(Object source) {
+		JButton button = (JButton) source;
+		String buttonText = button.getText();
+
+		if (gui.getNumeroCandidato().getText().length() < 5) {
+			if (buttonText.equals("0") && gui.getNumeroCandidato().getText().equals("0")) {
+				return;
+			}
+
+			gui.getNumeroCandidato().setText(gui.getNumeroCandidato().getText() + buttonText);
+		}
+	}
+
 
 	/**
 	 * Este metodo corrige a visualizacao do painel.
