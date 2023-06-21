@@ -1,0 +1,768 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+SIGE,com.sige.app,sigeInit,main,Long Statement,The length of the statement "showMessageDialog(null`"Erro ao iniciar o SIGE.\n\n" + "Informe o Seguinte Erro ao Analista: " + e.toString()`"Erro"`ERROR_MESSAGE);" is 132.,20
+SIGE,com.sige.app,sigeInit,main,Long Statement,The length of the statement "showMessageDialog(null`"Erro ao iniciar o banco de dados.\n\n" + "Informe o Seguinte Erro ao Analista: " + e.toString()`"Erro"`ERROR_MESSAGE);" is 142.,20
+SIGE,com.sige.graficos,GraficoBarra,GraficoBarra,Magic Number,The method contains a magic number: 550,51
+SIGE,com.sige.graficos,GraficoBarra,GraficoBarra,Magic Number,The method contains a magic number: 45,51
+SIGE,com.sige.graficos,GraficoBarra,GraficoBarra,Magic Number,The method contains a magic number: 14,51
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Long Statement,The length of the statement "JFreeChart grafico=ChartFactory.createBarChart(titulo`"CANDIDATOS"`"PORCENTAGEM"`dados`PlotOrientation.HORIZONTAL`true`false`false);" is 132.,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Long Statement,The length of the statement "barRenderer.setSeriesItemLabelGenerator(x++`new StandardCategoryItemLabelGenerator("{2}" + "% " + resultado.getInt("votos") + " votos"`new DecimalFormat("0.00")`NumberFormat.getPercentInstance(new Locale("pt"`"BR"))));" is 218.,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Long Statement,The length of the statement "barRenderer.setSeriesItemLabelGenerator(x++`new StandardCategoryItemLabelGenerator("{2}" + "% " + dataBancoDadosVotacaoCargos.obterQuantidadeBranco(this.cargo`data) + " votos"`new DecimalFormat("0.00")`NumberFormat.getPercentInstance(new Locale("pt"`"BR"))));" is 259.,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Long Statement,The length of the statement "barRenderer.setSeriesItemLabelGenerator(x`new StandardCategoryItemLabelGenerator("{2}" + "% " + dataBancoDadosVotacaoCargos.obterQuantidadeNulo(this.cargo`data) + " votos"`new DecimalFormat("0.00")`NumberFormat.getPercentInstance(new Locale("pt"`"BR"))));" is 255.,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 20,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 14,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 14,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 14,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 0.25,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 0.25,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 100,99
+SIGE,com.sige.graficos,GraficoBarra,criaGraficoBarra,Magic Number,The method contains a magic number: 20,99
+SIGE,com.sige.graficos,GraficoBarra,quantidadeCandidatos,Magic Number,The method contains a magic number: 2,179
+SIGE,com.sige.graficos,GraficoBarra,criaConjuntoDados,Long Statement,The length of the statement "while (resultado.next()) dataSet.addValue(resultado.getInt("votos") * porcentagem`resultado.getString("candidato")`cargo);" is 122.,195
+SIGE,com.sige.graficos,GraficoBarra,criaConjuntoDados,Magic Number,The method contains a magic number: 100.0,195
+SIGE,com.sige.graficos,GraficoLinha,GraficoLinha,Magic Number,The method contains a magic number: 3,54
+SIGE,com.sige.graficos,GraficoLinha,GraficoLinha,Magic Number,The method contains a magic number: 14,54
+SIGE,com.sige.graficos,GraficoLinha,GraficoLinha,Magic Number,The method contains a magic number: 14,54
+SIGE,com.sige.graficos,GraficoLinha,GraficoLinha,Magic Number,The method contains a magic number: 14,54
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Long Statement,The length of the statement "JFreeChart grafico=ChartFactory.createLineChart(titulo`null`"PORCENTAGEM"`dataset`PlotOrientation.VERTICAL`true`true`false);" is 124.,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 17,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 0.15,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 0.10,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 20,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 17,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 6,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 5.0,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 5.0,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 10.0,111
+SIGE,com.sige.graficos,GraficoLinha,criaGraficoLinha,Magic Number,The method contains a magic number: 10.0,111
+SIGE,com.sige.graficos,GraficoLinha,criaConjuntoDados,Long Statement,The length of the statement "dataSet.addValue((resultado.getInt("numero_votos") * porcentagem)`resultado.getString("nome_candidato")`descobreMes(dataPesquisas[x]));" is 135.,212
+SIGE,com.sige.graficos,GraficoLinha,criaConjuntoDados,Magic Number,The method contains a magic number: 100.0,212
+SIGE,com.sige.gui.ajuda,DialogoSobre,DialogoSobre,Magic Number,The method contains a magic number: 2,27
+SIGE,com.sige.gui.ajuda,DialogoSobre,DialogoSobre,Magic Number,The method contains a magic number: 3,27
+SIGE,com.sige.gui.ajuda,DialogoSobre,DialogoSobre,Magic Number,The method contains a magic number: 610,27
+SIGE,com.sige.gui.ajuda,DialogoSobre,DialogoSobre,Magic Number,The method contains a magic number: 120,27
+SIGE,com.sige.gui.ajuda,MenuAjuda,MenuAjuda,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.ajuda,MenuAjuda,MenuAjuda,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Long Method,The method has 118 lines of code.,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Long Parameter List,The method has 5 parameters. ,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Long Statement,The length of the statement "if (caminhoImagem.equalsIgnoreCase("/icones/cadastro.png")) img=Toolkit.getDefaultToolkit().getImage(getClass().getResource(caminhoImagem));" is 140.,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 4,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 25,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 21,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 21,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 13,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 14,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 14,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 14,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 14,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 200,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,DialogoCadastrarCandidato,Magic Number,The method contains a magic number: 200,47
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,addFotoCandidato,Magic Number,The method contains a magic number: 200,222
+SIGE,com.sige.gui.candidato,DialogoCadastrarCandidato,addFotoCandidato,Magic Number,The method contains a magic number: 200,222
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Complex Conditional,The conditional expression colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex() is complex.,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Long Statement,The length of the statement "if (colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex()) return false;" is 217.,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 2,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 34,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 30,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 2,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 19,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 2,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 8,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 5727320816550514929L,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 420,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 230,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 35,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 160,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 30,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 100,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 14,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,DialogoConsultarCandidato,Magic Number,The method contains a magic number: 14,39
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,isCellEditable,Complex Conditional,The conditional expression colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex() is complex.,95
+SIGE,com.sige.gui.candidato,DialogoConsultarCandidato,isCellEditable,Long Statement,The length of the statement "if (colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex()) return false;" is 217.,95
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Complex Method,Cyclomatic complexity of the method is 18,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Long Method,The method has 107 lines of code.,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Long Statement,The length of the statement "else if (caminhoImagem.equalsIgnoreCase("Recursos/Imagens/Default/cadastro.png")) new DialogoErro(gui`"Erro"`"Selecione uma Imagem Para o Candidato");" is 150.,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.alterarCandidatoNovoNumero(gui.getNumeroAlterar()`Integer.parseInt(numero)`nome`partido`cargo`caminhoImagem);" is 127.,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.alterarCandidatoCargo(gui.getCargoAlterar()`Integer.parseInt(numero)`nome`partido`cargo`caminhoImagem);" is 121.,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.alterarCandidatoNovoNumeroCargo(gui.getCargoAlterar()`gui.getNumeroAlterar()`Integer.parseInt(numero)`nome`partido`cargo`caminhoImagem);" is 154.,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosCadastroCandidato,actionPerformed,Magic Number,The method contains a magic number: 2,52
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNumero,Magic Number,The method contains a magic number: 6,82
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNumero,Magic Number,The method contains a magic number: 4,82
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNumero,Magic Number,The method contains a magic number: 2,82
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNumero,Magic Number,The method contains a magic number: 3,82
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNome,Magic Number,The method contains a magic number: 4,121
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNome,Magic Number,The method contains a magic number: 2,121
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,pesquisaPorNome,Magic Number,The method contains a magic number: 3,121
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,mouseClicked,Magic Number,The method contains a magic number: 2,162
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,mouseClicked,Magic Number,The method contains a magic number: 2,162
+SIGE,com.sige.gui.candidato.eventos,TratadorEventosConsultaCandidato,mouseClicked,Magic Number,The method contains a magic number: 3,162
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 27,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 30,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 6,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 3,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 14,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 14,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 14,33
+SIGE,com.sige.gui.cargo,DialogoCadastrarCargo,DialogoCadastrarCargo,Magic Number,The method contains a magic number: 14,33
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Complex Conditional,The conditional expression colIndex == getColumn("ID").getModelIndex() || colIndex == getColumn("NOME").getModelIndex() || colIndex == getColumn("DIGITOS").getModelIndex() is complex.,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Long Statement,The length of the statement "if (colIndex == getColumn("ID").getModelIndex() || colIndex == getColumn("NOME").getModelIndex() || colIndex == getColumn("DIGITOS").getModelIndex()) return false;" is 163.,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 33,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 5727320816550514929L,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 300,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 200,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 10,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 160,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 30,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 14,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,DialogoConsultarCargo,Magic Number,The method contains a magic number: 14,38
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,isCellEditable,Complex Conditional,The conditional expression colIndex == getColumn("ID").getModelIndex() || colIndex == getColumn("NOME").getModelIndex() || colIndex == getColumn("DIGITOS").getModelIndex() is complex.,72
+SIGE,com.sige.gui.cargo,DialogoConsultarCargo,isCellEditable,Long Statement,The length of the statement "if (colIndex == getColumn("ID").getModelIndex() || colIndex == getColumn("NOME").getModelIndex() || colIndex == getColumn("DIGITOS").getModelIndex()) return false;" is 163.,72
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosCadastroCargo,actionPerformed,Complex Method,Cyclomatic complexity of the method is 13,43
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosCadastroCargo,actionPerformed,Magic Number,The method contains a magic number: 5,43
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosCadastroCargo,actionPerformed,Magic Number,The method contains a magic number: 5,43
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosConsultaCargo,mouseClicked,Magic Number,The method contains a magic number: 2,75
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosConsultaCargo,mouseClicked,Magic Number,The method contains a magic number: 2,75
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosConsultaCargo,pesquisaPorNome,Magic Number,The method contains a magic number: 3,100
+SIGE,com.sige.gui.cargo.eventos,TratadorEventosConsultaCargo,pesquisaPorNome,Magic Number,The method contains a magic number: 2,100
+SIGE,com.sige.gui,Janela,janelaAbrirArquivo,Long Parameter List,The method has 6 parameters. ,38
+SIGE,com.sige.gui,JanelaPrincipal,JanelaPrincipal,Long Statement,The length of the statement "JLabel labelLogo=new JLabel(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icones/TSE.png"))));" is 124.,37
+SIGE,com.sige.gui,JanelaPrincipal,JanelaPrincipal,Long Statement,The length of the statement "JLabel labelHelp=new JLabel(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icones/descricao.png"))));" is 130.,37
+SIGE,com.sige.gui,JanelaPrincipal,JanelaPrincipal,Magic Number,The method contains a magic number: 12,37
+SIGE,com.sige.gui,JanelaPrincipal,JanelaPrincipal,Magic Number,The method contains a magic number: 720,37
+SIGE,com.sige.gui,JanelaPrincipal,JanelaPrincipal,Magic Number,The method contains a magic number: 650,37
+SIGE,com.sige.gui,MenuCadastro,MenuCadastro,Magic Number,The method contains a magic number: 12,26
+SIGE,com.sige.gui,MenuCadastro,MenuCadastro,Magic Number,The method contains a magic number: 12,26
+SIGE,com.sige.gui,MenuCadastro,MenuCadastro,Magic Number,The method contains a magic number: 12,26
+SIGE,com.sige.gui,MenuCadastro,MenuCadastro,Magic Number,The method contains a magic number: 12,26
+SIGE,com.sige.gui,MenuListagem,MenuListagem,Magic Number,The method contains a magic number: 12,28
+SIGE,com.sige.gui,MenuListagem,MenuListagem,Magic Number,The method contains a magic number: 12,28
+SIGE,com.sige.gui,MenuListagem,MenuListagem,Magic Number,The method contains a magic number: 12,28
+SIGE,com.sige.gui,MenuListagem,MenuListagem,Magic Number,The method contains a magic number: 12,28
+SIGE,com.sige.gui,ShadowBorder,paintBorder,Long Parameter List,The method has 6 parameters. ,33
+SIGE,com.sige.gui.ferramentas,DialogoBanco,DialogoBanco,Magic Number,The method contains a magic number: 8,30
+SIGE,com.sige.gui.ferramentas,DialogoBanco,DialogoBanco,Magic Number,The method contains a magic number: 30,30
+SIGE,com.sige.gui.ferramentas,DialogoBanco,DialogoBanco,Magic Number,The method contains a magic number: 14,30
+SIGE,com.sige.gui.ferramentas,DialogoBanco,DialogoBanco,Magic Number,The method contains a magic number: 14,30
+SIGE,com.sige.gui.ferramentas,MenuFerramentas,MenuFerramentas,Magic Number,The method contains a magic number: 12,25
+SIGE,com.sige.gui.ferramentas,MenuFerramentas,MenuFerramentas,Magic Number,The method contains a magic number: 12,25
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,limparBanco,Empty catch clause,The method has an empty catch block.,101
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,limparBanco,Magic Number,The method contains a magic number: 5,101
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,limparBanco,Magic Number,The method contains a magic number: 5,101
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,limparBanco,Magic Number,The method contains a magic number: 5,101
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Method,The method has 226 lines of code.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "if (banco > 0) op=JOptionPane.showConfirmDialog(dialogoBanco`"O Banco Ja Esta Populado. Gostaria de Limpa-lo e Popula-lo?");" is 124.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(13`"DILMA ROUSSEF"`"PT"`"PRESIDENTE"`"Recursos//Imagens//Default//Candidatos//DILMA.jpg");" is 127.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(45`"JOSE SERRA"`"PMDB"`"PRESIDENTE"`"Recursos//Imagens//Default//Candidatos//JOSE.jpg");" is 125.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(15`"AGUINALDO TERRA"`"PSDB"`"PRESIDENTE"`"Recursos//Imagens//Default//Candidatos//AGUINALDO.jpg");" is 135.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(13`"ANTONIO ANASTASIA"`"PT"`"GOVERNADOR"`"Recursos//Imagens//Default//Candidatos//ANTONIO.jpg");" is 133.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(45`"AECIO NEVES"`"PMDB"`"GOVERNADOR"`"Recursos//Imagens//Default//Candidatos//AECIO.jpg");" is 127.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(13`"DANUZA BIAS FORTES"`"PT"`"PREFEITO"`"Recursos//Imagens//Default//Candidatos//DANUZA.jpg");" is 131.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(45`"MARTIM ANDRADA"`"PMDB"`"PREFEITO"`"Recursos//Imagens//Default//Candidatos//MARTIM.jpg");" is 129.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(13`"FRANK AGUIAR"`"PT"`"DEPUTADO FEDERAL"`"Recursos//Imagens//Default//Candidatos//FRANK.jpg");" is 132.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(4555`"ROMARIO"`"PMDB"`"DEPUTADO FEDERAL"`"Recursos//Imagens//Default//Candidatos//ROMARIO.jpg");" is 133.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Long Statement,The length of the statement "dataBaseCandidato.adicionarCandidato(1555`"TIRIRICA"`"PSDB"`"DEPUTADO FEDERAL"`"Recursos//Imagens//Default//Candidatos//TIRIRICA.jpg");" is 135.,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 13,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 15,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 45,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 43,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 50,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 65,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 13,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 45,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 15,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 13,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 45,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 13,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 45,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 13,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4555,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 1555,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 100,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 140,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 14,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 16,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 200,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 100,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 150,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 6,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 14,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 26,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 290,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 40,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 30,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 15,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 30,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 50,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 40,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 55,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 45,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 30,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 55,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 60,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 83,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 6,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 140,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 6,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 110,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 23,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 23,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 4,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 2,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 220,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 150,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 196,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 136,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 10,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 3,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 100,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 30,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 50,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 70,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 50,119
+SIGE,com.sige.gui.ferramentas.eventos,TratadorEventosBancoDados,actionPerformed,Magic Number,The method contains a magic number: 5,119
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,keyReleased,Magic Number,The method contains a magic number: 4,64
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,keyReleased,Magic Number,The method contains a magic number: 2,64
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,keyReleased,Magic Number,The method contains a magic number: 3,64
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,mouseClicked,Magic Number,The method contains a magic number: 10,108
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,mouseClicked,Magic Number,The method contains a magic number: 3,108
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,mouseClicked,Magic Number,The method contains a magic number: 2,108
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCandidato,verificaCandidato,Long Statement,The length of the statement "for (int x=0; x < tamanhoTabela; x++) if (modeloTabelaAux.getValueAt(x`0).toString().equalsIgnoreCase(numero)) return false;" is 124.,146
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,keyReleased,Magic Number,The method contains a magic number: 3,64
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,keyReleased,Magic Number,The method contains a magic number: 2,64
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,mouseClicked,Long Statement,The length of the statement "for (int x=0; x < modeloTabela.getRowCount(); x++) if (nome.equalsIgnoreCase(modeloTabela.getValueAt(x`1).toString())) posicao=1;" is 129.,103
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,mouseClicked,Magic Number,The method contains a magic number: 2,103
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,mouseClicked,Magic Number,The method contains a magic number: 3,103
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpCargo,mouseClicked,Magic Number,The method contains a magic number: 2,103
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpPartido,keyReleased,Magic Number,The method contains a magic number: 3,65
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpPartido,keyReleased,Magic Number,The method contains a magic number: 2,65
+SIGE,com.sige.gui.lookup.eventos,TratadorEventosLookUpPartido,mouseClicked,Magic Number,The method contains a magic number: 2,105
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Complex Conditional,The conditional expression colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex() is complex.,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Long Statement,The length of the statement "if (colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex()) {" is 205.,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 2,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 21,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 30,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 2,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 19,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 2,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 5,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 5727320816550514929L,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 360,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 200,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 30,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 140,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 27,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 60,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 14,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,LookUpCandidato,Magic Number,The method contains a magic number: 14,28
+SIGE,com.sige.gui.lookup,LookUpCandidato,isCellEditable,Complex Conditional,The conditional expression colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex() is complex.,100
+SIGE,com.sige.gui.lookup,LookUpCandidato,isCellEditable,Long Statement,The length of the statement "if (colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex()) {" is 205.,100
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 23,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 300,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 200,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 10,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 170,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 20,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 14,28
+SIGE,com.sige.gui.lookup,LookUpCargo,LookUpCargo,Magic Number,The method contains a magic number: 14,28
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 23,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 300,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 200,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 35,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 170,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 20,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 14,26
+SIGE,com.sige.gui.lookup,LookUpPartido,LookUpPartido,Magic Number,The method contains a magic number: 14,26
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 26,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 30,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 2,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 16,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 10,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 10,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.partido,DialogoCadastrarPartido,DialogoCadastrarPartido,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Complex Conditional,The conditional expression colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Sigla").getModelIndex() is complex.,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Long Statement,The length of the statement "if (colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Sigla").getModelIndex()) return false;" is 165.,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 43,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 5727320816550514929L,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 390,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 250,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 35,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 230,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 50,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 14,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,DialogoConsultarPartido,Magic Number,The method contains a magic number: 14,37
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,isCellEditable,Complex Conditional,The conditional expression colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Sigla").getModelIndex() is complex.,72
+SIGE,com.sige.gui.partido,DialogoConsultarPartido,isCellEditable,Long Statement,The length of the statement "if (colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Sigla").getModelIndex()) return false;" is 165.,72
+SIGE,com.sige.gui.partido.eventos,TratadorEventosCadastroPartido,actionPerformed,Complex Method,Cyclomatic complexity of the method is 13,39
+SIGE,com.sige.gui.partido.eventos,TratadorEventosCadastroPartido,actionPerformed,Magic Number,The method contains a magic number: 5,39
+SIGE,com.sige.gui.partido.eventos,TratadorEventosCadastroPartido,actionPerformed,Magic Number,The method contains a magic number: 5,39
+SIGE,com.sige.gui.partido.eventos,TratadorEventosConsultaPartido,mouseClicked,Magic Number,The method contains a magic number: 2,74
+SIGE,com.sige.gui.partido.eventos,TratadorEventosConsultaPartido,mouseClicked,Magic Number,The method contains a magic number: 2,74
+SIGE,com.sige.gui.partido.eventos,TratadorEventosConsultaPartido,pesquisaPorNome,Magic Number,The method contains a magic number: 3,99
+SIGE,com.sige.gui.partido.eventos,TratadorEventosConsultaPartido,pesquisaPorNome,Magic Number,The method contains a magic number: 2,99
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Long Method,The method has 118 lines of code.,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 3,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 8,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 8,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 8,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 8,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 2,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 13,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 30,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 30,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 345,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 100,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 30,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 200,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 30,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 13,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 13,44
+SIGE,com.sige.gui.pesquisa,DialogoCadastrarPesquisa,DialogoCadastrarPesquisa,Magic Number,The method contains a magic number: 13,44
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Long Statement,The length of the statement "String colunasTabela[]={"ID"`"Data Inicio"`"Data Fim"`"Cargo"`"Branco/Nulo"`"Indecisos"`"Entrevistados"`"Municipios"}` dadosTabela[][]=new String[0][0];" is 152.,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 680,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 250,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 3,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 50,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 50,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 130,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 50,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 35,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 60,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 45,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 8,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 2,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 3,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 4,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 5,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 6,31
+SIGE,com.sige.gui.pesquisa,DialogoConsultarPesquisa,DialogoConsultarPesquisa,Magic Number,The method contains a magic number: 7,31
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 3,37
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 17,37
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 30,37
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 30,37
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 14,37
+SIGE,com.sige.gui.pesquisa,DialogoRelatorioPesquisa,DialogoRelatorioPesquisa,Magic Number,The method contains a magic number: 14,37
+SIGE,com.sige.gui.pesquisa,MenuPesquisa,MenuPesquisa,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.pesquisa,MenuPesquisa,MenuPesquisa,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.pesquisa,MenuPesquisa,MenuPesquisa,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.pesquisa,MenuPesquisa,MenuPesquisa,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Complex Method,Cyclomatic complexity of the method is 22,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Long Statement,The length of the statement "else if (dataInicio.length() > 14 || dataInicio.length() < 10) new DialogoErro(gui`"Erro"`"Forneca uma Data Inicio Valida para a Pesquisa.");" is 141.,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Long Statement,The length of the statement "else if (dataFim.length() > 14 || dataFim.length() < 10) new DialogoErro(gui`"Erro"`"Forneca uma Data Fim Valida para a Pesquisa.");" is 132.,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Long Statement,The length of the statement "if (soma != Integer.parseInt(entrevistado)) new DialogoErro(gui`"Erro"`"A Quantidade de Entrevistados Nao Bate Com a Soma Dos Votos.");" is 135.,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Long Statement,The length of the statement "dataBasePesquisa.adicionarPesquisa(numero_pesquisa`dataInicio`dataFim`cargo`Integer.parseInt(branco)`Integer.parseInt(indeciso)`Integer.parseInt(entrevistado)`Integer.parseInt(municipio));" is 188.,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Long Statement,The length of the statement "for (int x=0; x < qtdeCandidatos; x++) dataBasePesquisaCandidatos.adicionarPesquisaCandidatos(numero_pesquisa`modeloTabela.getValueAt(x`1).toString()`Integer.parseInt(modeloTabela.getValueAt(x`2).toString()));" is 209.,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 14,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 14,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 6,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 3,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 5,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 6,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 3,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 5,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 6,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 1995,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosCadastroPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,52
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosConsultaPesquisaCandidatos,mouseClicked,Magic Number,The method contains a magic number: 400,47
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosConsultaPesquisaCandidatos,mouseClicked,Magic Number,The method contains a magic number: 150,47
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosConsultaPesquisaCandidatos,mouseClicked,Magic Number,The method contains a magic number: 120,47
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosConsultaPesquisaCandidatos,mouseClicked,Magic Number,The method contains a magic number: 30,47
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosConsultaPesquisaCandidatos,mouseClicked,Magic Number,The method contains a magic number: 2,47
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Complex Method,Cyclomatic complexity of the method is 8,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Long Statement,The length of the statement "if (dataInicio.length() > 14 || dataInicio.length() < 10) new DialogoErro(gui`"Erro"`"Forneca uma Data Inicio Valida para a Pesquisa.");" is 136.,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 14,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 14,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 6,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 3,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 5,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 6,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 10,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 3,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 5,43
+SIGE,com.sige.gui.pesquisa.eventos,TratadorEventosRelatorioPesquisa,actionPerformed,Magic Number,The method contains a magic number: 2,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 2,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 2,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 40,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 40,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 2,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 360,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 100,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 4,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 186,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 35,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 14,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 14,43
+SIGE,com.sige.gui.votacao,DialogoCadastrarVotocao,DialogoCadastrarVotocao,Magic Number,The method contains a magic number: 14,43
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 36,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 330,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 200,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 20,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 200,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.votacao,DialogoConsultarVotacao,DialogoConsultarVotacao,Magic Number,The method contains a magic number: 14,35
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Long Method,The method has 218 lines of code.,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 286,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 86,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 280,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 80,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 100,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 500,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 412,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 10,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 27,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 3,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 3,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 3,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 79,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 40,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 12,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 79,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 40,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 250250250,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 12,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 90,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 50,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 12,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 10,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 20,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 160,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 175,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 3,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 400,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 400,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 22,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 29,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 22,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 18,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 22,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 18,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 4,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 40,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 4,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 40,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 5,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,DialogoUrnaEletronica,Magic Number,The method contains a magic number: 2,70
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,verificaVotacao,Magic Number,The method contains a magic number: 11,364
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,verificaVotacao,Magic Number,The method contains a magic number: 13,364
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,addFotoCandidato,Magic Number,The method contains a magic number: 160,452
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,addFotoCandidato,Magic Number,The method contains a magic number: 175,452
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,atualizaCargoLabel,Long Statement,The length of the statement "if (cargos[qtdeCargos].indexOf(" ") != -1) cargoLabel.setText(" " + cargos[qtdeCargos].substring(0`cargos[qtdeCargos].indexOf(" ")) + "(A)"+ cargos[qtdeCargos].substring(cargos[qtdeCargos].indexOf(" ")));" is 204.,490
+SIGE,com.sige.gui.votacao,DialogoUrnaEletronica,atualizaCargoLabel,Magic Number,The method contains a magic number: 24,490
+SIGE,com.sige.gui.votacao,MenuVotacao,MenuVotacao,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.votacao,MenuVotacao,MenuVotacao,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.votacao,MenuVotacao,MenuVotacao,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.votacao,MenuVotacao,MenuVotacao,Magic Number,The method contains a magic number: 12,24
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Complex Method,Cyclomatic complexity of the method is 17,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Long Statement,The length of the statement "for (int x=0; x < modeloTabela.getRowCount(); x++) dataBaseVotacaoCargos.adicionarVotacaoCargos(data`modeloTabela.getValueAt(x`1).toString()`Integer.parseInt(modeloTabela.getValueAt(x`2).toString()));" is 200.,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Magic Number,The method contains a magic number: 14,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Magic Number,The method contains a magic number: 10,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Magic Number,The method contains a magic number: 23,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Magic Number,The method contains a magic number: 23,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosCadastrarVotacao,actionPerformed,Magic Number,The method contains a magic number: 2,58
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosConsultaVotacao,keyReleased,Magic Number,The method contains a magic number: 2,65
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Complex Method,Cyclomatic complexity of the method is 25,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Method,The method has 135 lines of code.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "if (votos == 0) dataBaseVotacaoCandidatos.adicionarVotacaoCandidatos(gui.getDATA_VOTACAO()`gui.getCargos()[gui.getQtdeCargos()]`gui.getNomeCandidato().getText()`votos + 1);" is 172.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO()) + 1`gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO());" is 212.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "dataBaseVotacaoCargos.atualizarNulo(dataBaseVotacaoCargos.obterQuantidadeNulo(gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO()) + 1`gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO());" is 202.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO()) + 1`gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO());" is 212.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "dataBaseVotacaoCargos.atualizarBranco(dataBaseVotacaoCargos.obterQuantidadeBranco(gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO()) + 1`gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO());" is 206.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Long Statement,The length of the statement "dataBaseVotacaoCargos.atualizarEleitores(dataBaseVotacaoCargos.obterQuantidadeEleitores(gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO()) + 1`gui.getCargos()[gui.getQtdeCargos()]`gui.getDATA_VOTACAO());" is 212.,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 31,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 31,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 150,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 500,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 500,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 500,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 300,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 300,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 150,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 40,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 10,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 500,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 187,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 33,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 2,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 2,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 3,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 3,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 4,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 4,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 5,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 5,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 6,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 6,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 7,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 7,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 8,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 8,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 9,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,actionPerformed,Magic Number,The method contains a magic number: 9,84
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,corrigeTela,Magic Number,The method contains a magic number: 29,280
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,corrigeTela,Magic Number,The method contains a magic number: 22,280
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaPartido,Long Statement,The length of the statement "verifica=dataBaseCandidato.verificaCandidatoPorCargo(Integer.parseInt(gui.getNumeroCandidato().getText())`gui.getCargos()[gui.getQtdeCargos()]);" is 144.,327
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaPartido,Magic Number,The method contains a magic number: 18,327
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaPartido,Magic Number,The method contains a magic number: 20,327
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaPartido,Magic Number,The method contains a magic number: 28,327
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaCandidato,Long Statement,The length of the statement "if (dataBaseCandidato.verificaCandidatoPorCargo(Integer.parseInt(gui.getNumeroCandidato().getText())`gui.getCargos()[gui.getQtdeCargos()]) != 0) {" is 146.,389
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaCandidato,Long Statement,The length of the statement "resultado=dataBaseCandidato.obterCandidatoPorCargo(Integer.parseInt(gui.getNumeroCandidato().getText())`gui.getCargos()[gui.getQtdeCargos()]);" is 142.,389
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaCandidato,Long Statement,The length of the statement "if (gui.getNomeCandidato().getText().indexOf(" ") != -1) gui.getNomeCandidato().setText(gui.getNomeCandidato().getText().substring(0`gui.getNomeCandidato().getText().indexOf(" ")));" is 181.,389
+SIGE,com.sige.gui.votacao.eventos,TratadorEventosUrnaEletronica,pesquisaCandidato,Magic Number,The method contains a magic number: 18,389
+SIGE,com.sige.persistencia,BancoDados,BancoDados,Long Statement,The length of the statement "DATABASE=new java.io.File("Recursos" + System.getProperty("file.separator") + "BancoDados"+ System.getProperty("file.separator")+ "sige.db");" is 141.,14
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS cargo (" + "numero numeric NOT NULL` " + "nome character varying(30)` "+ "digitos numeric NOT NULL` "+ "CONSTRAINT cargo_pkey PRIMARY KEY (numero)"+ ")");" is 200.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS partido (" + "numero numeric NOT NULL` " + "nome character varying(30)` "+ "sigla character varying(10)`"+ "CONSTRAINT partido_pkey PRIMARY KEY (numero)"+ ")");" is 206.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS candidato (" + "numero numeric NOT NULL` " + "nome character varying(30)` "+ "partido numeric NOT NULL` "+ "cargo numeric NOT NULL` "+ "caminhoFoto character varying(100)` "+ "CONSTRAINT candidato_pkey PRIMARY KEY (numero`cargo)`"+ "CONSTRAINT candidato_fkey FOREIGN KEY (partido) REFERENCES partido(numero) ON DELETE CASCADE`"+ "CONSTRAINT candidato_fkey FOREIGN KEY (cargo) REFERENCES cargo(numero) ON DELETE CASCADE"+ ")");" is 472.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS pesquisa (" + "numero_pesquisa numeric NOT NULL` " + "data_inicio DATE NOT NULL` "+ "data_fim DATE NOT NULL` "+ "cargo numeric NOT NULL` "+ "numero_branco numeric NOT NULL` "+ "numero_indeciso numeric NOT NULL` "+ "numero_entrevistado numeric NOT NULL` "+ "numero_municipios numeric NOT NULL` "+ "CONSTRAINT pesquisa_pkey PRIMARY KEY (numero_pesquisa)"+ ")");" is 405.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS pesquisa_candidatos (" + "numero_pesquisa numeric NOT NULL` " + "nome_candidato character varying(100) NOT NULL` "+ "numero_votos numeric NOT NULL` "+ "CONSTRAINT candidato_fkey FOREIGN KEY (numero_pesquisa) REFERENCES pesquisa(numero_pesquisa) ON DELETE CASCADE"+ ")");" is 316.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS votacao (" + "data DATE NOT NULL` " + "hora_inicio numeric NOT NULL` "+ "hora_fim numeric NOT NULL` "+ "CONSTRAINT votacao_pkey PRIMARY KEY (data)"+ ")");" is 200.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS votacao_cargos (" + "data DATE NOT NULL` " + "cargo numeric NOT NULL` "+ "digitos numeric NOT NULL` "+ "branco numeric DEFAULT 0` "+ "nulo numericic DEFAULT 0` "+ "eleitores numericic DEFAULT 0` "+ "CONSTRAINT votacao_cargos_fkey FOREIGN KEY (cargo) REFERENCES cargo(numero) ON DELETE CASCADE` "+ "CONSTRAINT votacao_cargos_fkey FOREIGN KEY (data) REFERENCES votacao(data) ON DELETE CASCADE"+ ")");" is 444.,112
+SIGE,com.sige.persistencia,BancoDados,criaNovoBancoDados,Long Statement,The length of the statement "afirmacao.execute("CREATE TABLE IF NOT EXISTS votacao_candidatos (" + "data DATE NOT NULL` " + "cargo numeric NOT NULL` "+ "candidato numeric NOT NULL` "+ "votos numeric numeric DEFAULT 0` "+ "CONSTRAINT votacao_candidatos_fkey FOREIGN KEY (data) REFERENCES votacao(data) ON DELETE CASCADE` "+ "CONSTRAINT votacao_candidatos_fkey FOREIGN KEY (cargo) REFERENCES votacao_cargos(cargo) ON DELETE CASCADE` "+ "CONSTRAINT votacao_candidatos_fkey FOREIGN KEY (candidato) REFERENCES candidato(numero) ON DELETE CASCADE"+ ")");" is 519.,112
+SIGE,com.sige.persistencia,BancoDadosCandidato,verificaCandidatoPorCargo,Long Statement,The length of the statement "SQL="SELECT COUNT(candidato.numero) AS qtde FROM candidato WHERE candidato.numero = " + numero + " AND candidato.cargo LIKE \'"+ cargo+ "\'";" is 141.,78
+SIGE,com.sige.persistencia,BancoDadosCandidato,verificaCandidatoPorCargo,Long Statement,The length of the statement "SQL="SELECT COUNT(candidato.nome) AS qtde FROM candidato WHERE candidato.nome LIKE \'" + nome + "\' AND candidato.cargo LIKE \'"+ cargo+ "\'";" is 142.,93
+SIGE,com.sige.persistencia,BancoDadosCandidato,verificaCandidatoPorNumeroCargo,Long Statement,The length of the statement "SQL="SELECT COUNT(candidato.numero) AS qtde FROM candidato WHERE candidato.numero = " + numero + " AND candidato.numero IN (SELECT candidato.numero FROM candidato WHERE candidato.cargo LIKE \'"+ cargo+ "\')";" is 208.,108
+SIGE,com.sige.persistencia,BancoDadosCandidato,adicionarCandidato,Long Parameter List,The method has 5 parameters. ,123
+SIGE,com.sige.persistencia,BancoDadosCandidato,adicionarCandidato,Long Statement,The length of the statement "SQL="INSERT INTO candidato (numero` nome` partido` cargo` caminhoFoto) VALUES (" + numero + "`'"+ nome+ "'`'"+ partido+ "'`'"+ cargo+ "'`'"+ caminhoFoto+ "')";" is 159.,123
+SIGE,com.sige.persistencia,BancoDadosCandidato,obterCandidatoPorCargo,Long Statement,The length of the statement "SQL="SELECT numero` nome` partido` cargo FROM candidato WHERE candidato.nome LIKE \'" + nome + "\' AND candidato.nome IN (SELECT candidato.nome FROM candidato WHERE candidato.cargo LIKE \'"+ cargo+ "\')";" is 204.,154
+SIGE,com.sige.persistencia,BancoDadosCandidato,obterCandidatoPorCargo,Long Statement,The length of the statement "SQL="SELECT numero` nome` partido` cargo` caminhoFoto FROM candidato WHERE candidato.numero = " + numero + " AND candidato.cargo = \'"+ cargo+ "\'";" is 148.,183
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoNovoNumero,Long Parameter List,The method has 6 parameters. ,227
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoNovoNumero,Long Statement,The length of the statement "SQL="UPDATE candidato SET numero = " + numero + "` nome = '"+ nome+ "'` partido = '"+ partido+ "'` caminhoFoto = '"+ caminhoFoto+ "' WHERE candidato.numero = "+ numeroCandidato+ " AND cargo = '"+ cargo+ "'";" is 207.,227
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidato,Long Parameter List,The method has 5 parameters. ,244
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidato,Long Statement,The length of the statement "SQL="UPDATE candidato SET nome = '" + nome + "'` partido = '"+ partido+ "'` caminhoFoto = '"+ caminhoFoto+ "' WHERE candidato.numero = "+ numeroCandidato+ " AND cargo = '"+ cargo+ "'";" is 184.,244
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoNovoNumeroCargo,Long Parameter List,The method has 7 parameters. ,260
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoNovoNumeroCargo,Long Statement,The length of the statement "SQL="UPDATE candidato SET numero = " + numero + "` nome = '"+ nome+ "'` partido = '"+ partido+ "'` cargo = '"+ cargo+ "'` caminhoFoto = '"+ caminhoFoto+ "' WHERE candidato.numero = "+ numeroCandidato+ " AND cargo = '"+ cargoAnterior+ "'";" is 238.,260
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoCargo,Long Parameter List,The method has 6 parameters. ,278
+SIGE,com.sige.persistencia,BancoDadosCandidato,alterarCandidatoCargo,Long Statement,The length of the statement "SQL="UPDATE candidato SET nome = '" + nome + "'` partido = '"+ partido+ "'` cargo = '"+ cargo+ "'` caminhoFoto = '"+ caminhoFoto+ "' WHERE candidato.numero = "+ numeroCandidato+ " AND cargo = '"+ cargoAnterior+ "'";" is 215.,278
+SIGE,com.sige.persistencia,BancoDadosPartido,alterarPartido,Long Statement,The length of the statement "SQL="UPDATE partido SET numero = " + numero + "` nome = '"+ nome+ "'` sigla = '"+ sigla+ "' WHERE partido.numero = "+ numeroPartido;" is 132.,139
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterQuantidadePesquisas,Long Statement,The length of the statement "SQL="SELECT COUNT(numero_pesquisa) AS qtde FROM pesquisa WHERE cargo = '" + cargo + "' "+ "AND data_inicio >= \'"+ dataInicio+ "\' AND data_fim <= \'"+ dataFim+ "\'";" is 166.,35
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterNumeroPesquisas,Long Statement,The length of the statement "SQL="SELECT numero_pesquisa FROM pesquisa WHERE cargo = \'" + cargo + "\' AND data_inicio BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\' AND data_fim BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'";" is 206.,52
+SIGE,com.sige.persistencia,BancoDadosPesquisa,verificaPesquisaPorData,Long Statement,The length of the statement "SQL="SELECT COUNT(data_inicio) AS qtde FROM pesquisa WHERE cargo = '" + cargo + "' AND data_inicio BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'"+ "' AND data_fim BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'";" is 220.,73
+SIGE,com.sige.persistencia,BancoDadosPesquisa,verificaPesquisaPorData,Long Statement,The length of the statement "SQL="SELECT COUNT(data_inicio) AS qtde FROM pesquisa WHERE data_inicio BETWEEN \'" + dataInicio + "\' AND \'"+ dataFim+ "\'"+ "' AND data_fim BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'";" is 194.,89
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterPesquisaPorData,Long Statement,The length of the statement "SQL="SELECT numero_pesquisa` data_inicio` data_fim` cargo` numero_branco` numero_indeciso` numero_entrevistado` numero_municipios FROM pesquisa WHERE cargo = '" + cargo + "' AND data_inicio BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'"+ "' AND data_fim BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'";" is 311.,104
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterPesquisaPorData,Long Statement,The length of the statement "SQL="SELECT numero_pesquisa` data_inicio` data_fim` cargo` numero_branco` numero_indeciso` numero_entrevistado` numero_municipios FROM pesquisa WHERE data_inicio BETWEEN \'" + dataInicio + "\' AND \'"+ dataFim+ "\'"+ "' AND data_fim BETWEEN \'"+ dataInicio+ "\' AND \'"+ dataFim+ "\'";" is 285.,120
+SIGE,com.sige.persistencia,BancoDadosPesquisa,verificaPesquisaDataInicio,Long Statement,The length of the statement "SQL="SELECT COUNT(data_inicio) AS qtde FROM pesquisa WHERE cargo = '" + cargo + "' AND data_Inicio >= \'"+ dataInicio+ "\'";" is 124.,148
+SIGE,com.sige.persistencia,BancoDadosPesquisa,adicionarPesquisa,Long Parameter List,The method has 8 parameters. ,178
+SIGE,com.sige.persistencia,BancoDadosPesquisa,adicionarPesquisa,Long Statement,The length of the statement "SQL="INSERT INTO pesquisa (numero_pesquisa` data_inicio` data_fim` cargo` numero_branco` numero_indeciso` numero_entrevistado` numero_municipios) VALUES (" + numero_pesquisa + "`'"+ dataInicio+ "'`'"+ dataFim+ "'` '"+ cargo+ "'` "+ branco+ "` "+ indeciso+ "` "+ entrevistado+ "` "+ municipio+ ")";" is 297.,178
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterPesquisa,Long Statement,The length of the statement "SQL="SELECT numero_pesquisa` data_inicio` data_fim` cargo` numero_branco` numero_indeciso` numero_entrevistado` numero_municipios FROM pesquisa WHERE pesquisa.numero_pesquisa = " + numero_pesquisa;" is 197.,197
+SIGE,com.sige.persistencia,BancoDadosPesquisa,obterPesquisa,Long Statement,The length of the statement "SQL="SELECT numero_pesquisa` data_inicio` data_fim` cargo` numero_branco` numero_indeciso` numero_entrevistado` numero_municipios FROM pesquisa WHERE pesquisa.data_inicio >= '" + dataInicio + "' AND pesquisa.data_fim <= '"+ dataFim+ "'";" is 237.,211
+SIGE,com.sige.persistencia,BancoDadosPesquisaCandidatos,verificaPesquisaCandidatos,Long Statement,The length of the statement "SQL="SELECT COUNT(numero_pesquisa) AS qtde FROM pesquisa_candidatos WHERE pesquisa_candidatos.numero_pesquisa = " + numero_pesquisa;" is 132.,50
+SIGE,com.sige.persistencia,BancoDadosPesquisaCandidatos,adicionarPesquisaCandidatos,Long Statement,The length of the statement "SQL="INSERT INTO pesquisa_candidatos (numero_pesquisa` nome_candidato` numero_votos) VALUES (" + numero_pesquisa + "` '"+ nome_candidato+ "'` "+ numero_votos+ ")";" is 163.,64
+SIGE,com.sige.persistencia,BancoDadosPesquisaCandidatos,obterPesquisaCandidatos,Long Statement,The length of the statement "SQL="SELECT nome_candidato` numero_votos FROM pesquisa_candidatos WHERE pesquisa_candidatos.numero_pesquisa = " + numero_pesquisa;" is 130.,78
+SIGE,com.sige.persistencia,BancoDadosVotacaoCandidatos,obterVotosCandidato,Long Statement,The length of the statement "SQL="SELECT votos FROM votacao_candidatos WHERE votacao_candidatos.candidato = '" + candidato + "' AND votacao_candidatos.data = '"+ data+ "'";" is 143.,25
+SIGE,com.sige.persistencia,BancoDadosVotacaoCandidatos,quantidadeVotacaoCandidatos,Long Statement,The length of the statement "SQL="SELECT COUNT(votacao_candidatos.candidato) AS qtde FROM votacao_candidatos WHERE votacao_candidatos.cargo = '" + cargo + "'";" is 130.,42
+SIGE,com.sige.persistencia,BancoDadosVotacaoCandidatos,adicionarVotacaoCandidatos,Long Statement,The length of the statement "SQL="INSERT INTO votacao_candidatos (data` cargo` candidato` votos) VALUES ('" + data + "'` '"+ cargo+ "'` '"+ candidato+ "'` "+ votos+ ")";" is 140.,68
+SIGE,com.sige.persistencia,BancoDadosVotacaoCandidatos,obterVotacaoCandidatos,Long Statement,The length of the statement "SQL="SELECT data` cargo` candidato` votos FROM votacao_candidatos WHERE votacao_candidatos.data = '" + data + "' AND votacao_candidatos.cargo = '"+ cargo+ "' ORDER BY votos DESC";" is 179.,110
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,obterQuantidadeNulo,Long Statement,The length of the statement "SQL="SELECT nulo FROM votacao_cargos WHERE votacao_cargos.cargo = '" + cargo + "' AND votacao_cargos.data = '"+ data+ "'";" is 122.,23
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,atualizarNulo,Long Statement,The length of the statement "SQL="UPDATE votacao_cargos SET nulo = " + nulo + " WHERE votacao_cargos.cargo = '"+ cargo+ "' AND votacao_cargos.data = '"+ data+ "'";" is 134.,40
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,obterQuantidadeBranco,Long Statement,The length of the statement "SQL="SELECT branco FROM votacao_cargos WHERE votacao_cargos.cargo = '" + cargo + "' AND votacao_cargos.data = '"+ data+ "'";" is 124.,53
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,atualizarBranco,Long Statement,The length of the statement "SQL="UPDATE votacao_cargos SET branco = " + branco + " WHERE votacao_cargos.cargo = '"+ cargo+ "' AND votacao_cargos.data = '"+ data+ "'";" is 138.,70
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,obterQuantidadeEleitores,Long Statement,The length of the statement "SQL="SELECT eleitores FROM votacao_cargos WHERE votacao_cargos.cargo = '" + cargo + "' AND votacao_cargos.data = '"+ data+ "'";" is 127.,83
+SIGE,com.sige.persistencia,BancoDadosVotacaoCargos,atualizarEleitores,Long Statement,The length of the statement "SQL="UPDATE votacao_cargos SET eleitores = " + eleitores + " WHERE votacao_cargos.cargo = '"+ cargo+ "' AND votacao_cargos.data = '"+ data+ "'";" is 144.,100
+SIGE,com.sige.recursos,Recurso,formataData,Magic Number,The method contains a magic number: 6,18
+SIGE,com.sige.recursos,Recurso,formataData,Magic Number,The method contains a magic number: 10,18
+SIGE,com.sige.recursos,Recurso,formataData,Magic Number,The method contains a magic number: 3,18
+SIGE,com.sige.recursos,Recurso,formataData,Magic Number,The method contains a magic number: 5,18
+SIGE,com.sige.recursos,Recurso,formataData,Magic Number,The method contains a magic number: 2,18
+SIGE,com.sige.recursos,Recurso,descobreMes,Magic Number,The method contains a magic number: 3,28
