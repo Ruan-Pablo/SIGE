@@ -97,14 +97,27 @@ public class LookUpCandidato extends JDialog {
 
 		tabelaCandidatos = new JTable(new DefaultTableModel(dadosTabela, colunasTabela)){
 			private static final long serialVersionUID = 5727320816550514929L;
-			public boolean isCellEditable(int rowIndex, int colIndex) {
-				if (colIndex == getColumn("Nome").getModelIndex() || colIndex == getColumn("Numero").getModelIndex() 
-						|| colIndex == getColumn("Partido").getModelIndex() || colIndex == getColumn("Cargo").getModelIndex()){
-					return false; //evita a edicao das celulas
-				}
-				else
-					return true;
+			public boolean isCellEditable(int colIndex, int rowIndex) {
+				Set<Integer> editableColumnIndexes = getEditableColumnIndexes();
+				
+				return editableColumnIndexes.contains(colIndex);
 			}
+
+			private Set<Integer> getEditableColumnIndexes() {
+				Set<String> editableColumnNames = new HashSet<>(Arrays.asList("Nome", "Numero", "Partido", "Cargo"));
+				TableColumnModel columnModel = getColumnModel();
+				Set<Integer> editableColumnIndexes = new HashSet<>();
+
+				for (int columnIndex = 0; columnIndex < columnModel.getColumnCount(); columnIndex++) {
+					String columnName = columnModel.getColumnName(columnIndex);
+					if (editableColumnNames.contains(columnName)) {
+						editableColumnIndexes.add(columnIndex);
+					}
+				}
+
+				return editableColumnIndexes;
+			}
+
 		};
 
 		// Define as propriedades da tabela de candidatos.
