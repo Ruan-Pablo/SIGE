@@ -189,10 +189,29 @@ public class BancoDadosPesquisa extends BancoDados {
 	 * @throws ClassNotFoundException Dispara uma excecao de Classe Nao encontrada.
 	 * @throws SQLException Dispara uma excecao SQL.
 	 */
-	public void adicionarPesquisa(int numero_pesquisa, String dataInicio, String dataFim, String cargo, int branco, int indeciso, int entrevistado, int municipio) throws SQLException, ClassNotFoundException {
-		SQL = "INSERT INTO pesquisa (numero_pesquisa, data_inicio, data_fim, cargo, numero_branco, numero_indeciso, numero_entrevistado, numero_municipios) VALUES (" + numero_pesquisa + ",'" + dataInicio + "','" + dataFim + "', '" + cargo + "', " + branco + ", " + indeciso + ", " + entrevistado + ", " + municipio + ")";
-		executaSemRetorno(SQL);
-	}
+	public void adicionarPesquisa(Pesquisa pesquisa) throws SQLException, ClassNotFoundException {
+    String SQL = "INSERT INTO pesquisa (numero_pesquisa, data_inicio, data_fim, cargo, numero_branco, numero_indeciso, numero_entrevistado, numero_municipios) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    PreparedStatement stmt = null;
+
+    try {
+        stmt = connection.prepareStatement(SQL);
+        stmt.setInt(1, pesquisa.getNumeroPesquisa());
+        stmt.setString(2, pesquisa.getDataInicio());
+        stmt.setString(3, pesquisa.getDataFim());
+        stmt.setString(4, pesquisa.getCargo());
+        stmt.setInt(5, pesquisa.getBranco());
+        stmt.setInt(6, pesquisa.getIndeciso());
+        stmt.setInt(7, pesquisa.getEntrevistado());
+        stmt.setInt(8, pesquisa.getMunicipio());
+
+        stmt.executeUpdate();
+    } finally {
+        if (stmt != null) {
+            stmt.close();
+        }
+    }
+}
+
 
 	/**
 	 * Busca uma pesquisa a partir de um numero.
