@@ -34,7 +34,8 @@ public class MenuListagem extends JMenu {
 		
 		super("Listagem");
 		this.janelaPrincipal = janelaPrincipal;
-		setFont(new Font("Arial", Font.BOLD, 12));
+		int tamanhoFonte = 12;
+		setFont(new Font("Arial", Font.BOLD, tamanhoFonte));
 		setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		setIcon(new ImageIcon(getClass().getResource("/icones/MOVIMENTO.png")));
 		setMnemonic(KeyEvent.VK_L);
@@ -83,7 +84,7 @@ public class MenuListagem extends JMenu {
 	}
 
 	/**
-	 * @return uma <JanelaPrincipal> com a referência da janela Pai.
+	 * @return uma <JanelaPrincipal> com a referï¿½ncia da janela Pai.
 	 */
 	public JanelaPrincipal getJanelaPrincipal() {
 		return janelaPrincipal;
