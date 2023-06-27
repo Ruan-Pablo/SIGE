@@ -24,7 +24,7 @@ public class MenuListagem extends JMenu {
 	private JanelaPrincipal janelaPrincipal;
 
 	private static final long serialVersionUID = 1L;
-	
+	private static final int tamanhoFonte = 12;
 	/**
 	 * Este e o construtor. Ele constroi o menu "Candidato" e o adiciona na barra de menus na <code>JanelaPrincipal</code>.
 	 * 
@@ -34,7 +34,7 @@ public class MenuListagem extends JMenu {
 		
 		super("Listagem");
 		this.janelaPrincipal = janelaPrincipal;
-		int tamanhoFonte = 12;
+		
 		setFont(new Font("Arial", Font.BOLD, tamanhoFonte));
 		setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		setIcon(new ImageIcon(getClass().getResource("/icones/MOVIMENTO.png")));
