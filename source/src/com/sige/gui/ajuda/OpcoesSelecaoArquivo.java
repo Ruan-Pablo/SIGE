@@ -6,6 +6,15 @@ public class OpcoesSelecaoArquivo {
     private String nomeFiltro;
     private String[] extensao;
 
+    public OpcoesSelecaoArquivo(Component componentePai, String titulo, String diretorioCorrente, boolean opcaoTodosArquivos, String nomeFiltro, String... extensao) {
+        this.componentePai = componentePai;
+        this.titulo = titulo;
+        this.diretorioCorrente = diretorioCorrente;
+        this.opcaoTodosArquivos = opcaoTodosArquivos;
+        this.nomeFiltro = nomeFiltro;
+        this.extensao = extensao;
+    }
+
     public Component getComponentePai() {
         return componentePai;
     }
