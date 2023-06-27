@@ -39,7 +39,7 @@ public class DialogoConsultarCandidato extends JDialog {
 	/**
 	 * Este e o construtor. Ele constroi a interface grafica do dialogo consultar candidato. 
 	 * 
-	 * @param janelaPrincipal um <code>JanelaPrincipal</code> com a referência da janela pai.
+	 * @param janelaPrincipal um <code>JanelaPrincipal</code> com a referï¿½ncia da janela pai.
 	 */
 	public DialogoConsultarCandidato(JanelaPrincipal janelaPrincipal) {
 
@@ -70,11 +70,11 @@ public class DialogoConsultarCandidato extends JDialog {
 		
 		// Adiciona o painelOUNumero e todo seu conteudo ao painelNorte.
 		painelNorte.add(painelOUNumero);
-
+		public static final int NUMERO_DE_COLUNAS = 8
 		// Define o painelNumero como GridLayout com duas linhas e uma coluna.
 		JPanel painelNumero = new JPanel(new GridLayout(2,1));
 		painelNumero.add(new JLabel(" Numero"));
-		fieldNumero = new JTextField(8);
+		fieldNumero = new JTextField(NUMERO_DE_COLUNAS);
 		fieldNumero.setToolTipText("Descreva Aqui o Numero do Candidato a Ser Pesquisado.");
 		fieldNumero.setDocument(new SomenteNumeros());
 		fieldNumero.addKeyListener(tratadorEventos);
@@ -91,6 +91,7 @@ public class DialogoConsultarCandidato extends JDialog {
 				dadosTabela[][] = new String[0][0];
 
 		tabelaCandidatos = new JTable(new DefaultTableModel(dadosTabela, colunasTabela)){
+			private static int ID = 
 			private static final long serialVersionUID = 5727320816550514929L;
 			public boolean isCellEditable(int rowIndex, int colIndex) {
 				if (colIndex == getColumn("Numero").getModelIndex() || colIndex == getColumn("Nome").getModelIndex() 
