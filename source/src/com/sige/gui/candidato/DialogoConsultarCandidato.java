@@ -35,7 +35,8 @@ public class DialogoConsultarCandidato extends JDialog {
 	private JTextField fieldNome, fieldNumero;
 	private JButton botaoSair, botaoLimpar;
 	private JTable tabelaCandidatos;
-
+	public static final int NUMERO_DE_COLUNAS = 8
+	
 	/**
 	 * Este e o construtor. Ele constroi a interface grafica do dialogo consultar candidato. 
 	 * 
@@ -70,7 +71,7 @@ public class DialogoConsultarCandidato extends JDialog {
 		
 		// Adiciona o painelOUNumero e todo seu conteudo ao painelNorte.
 		painelNorte.add(painelOUNumero);
-		public static final int NUMERO_DE_COLUNAS = 8
+		
 		// Define o painelNumero como GridLayout com duas linhas e uma coluna.
 		JPanel painelNumero = new JPanel(new GridLayout(2,1));
 		painelNumero.add(new JLabel(" Numero"));
