@@ -43,7 +43,10 @@ public class DialogoCadastrarCandidato extends JDialog {
 	private String caminhoImagem;
 	private int NumeroAlterar;
 	private String cargoAlterar;
-
+	
+	private static final int NUMERO_DE_LINHAS = 4;
+	private static final int TAMANHO_MAXIMO_NOME = 25;
+	private static final int TAMANHO_MAXIMO_DOCUMENTO = 30;
 	/**
 	 * Este e o construtor. Ele constroi a interface grafica do dialogo cadastrar candidato. Caso seja um cadastro, o usuario
 	 * deve informar "-1" no campo "Numero". Caso contrario, seja alteracao, o usuario deve apenas passar as informacoes do
@@ -62,9 +65,7 @@ public class DialogoCadastrarCandidato extends JDialog {
 		NumeroAlterar = Integer.parseInt(numero);
 		cargoAlterar = cargo;
 		
-		private static final int NUMERO_DE_LINHAS = 4;
-		private static final int TAMANHO_MAXIMO_NOME = 25;
-		private static final int TAMANHO_MAXIMO_DOCUMENTO = 30;
+
 
 
 		JPanel painelNorte = new JPanel(new GridLayout(NUMERO_DE_LINHAS,0));
