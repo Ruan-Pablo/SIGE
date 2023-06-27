@@ -8,14 +8,6 @@ public class ParameterShadowBorder {
     private int l; 
     private int i1;
 
-    public ParameterShadowBorder (Component _component, Graphics _g, int _j, int _k, int _l, int _i1){
-        this.component = _component;
-        this.g = _g;
-        this.j = _j;
-        this.k = _k;
-        this.l = _l;
-        this.i1 = _i1;        
-    }
     public void setComponent(Component comp){
         this.component = comp;
     }
