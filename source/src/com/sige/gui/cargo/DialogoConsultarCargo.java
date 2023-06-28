@@ -67,19 +67,23 @@ public class DialogoConsultarCargo extends JDialog {
 		String colunasTabela[] = {"ID", "NOME", "DIGITOS"},
 				dadosTabela[][] = new String[0][0];
 
-		tabelaCargos = new JTable(new DefaultTableModel(dadosTabela, colunasTabela)){
+		tabelaCargos = new JTable(new DefaultTableModel(dadosTabela, colunasTabela)) {
 			private static final long serialVersionUID = 5727320816550514929L;
-			Set<Integer> ColunaAceita = new HashSet<>();
-			ColunaAceita.add(getColumn("ID").getModelIndex());
-			ColunaAceita.add(getColumn("NOME").getModelIndex());
-			ColunaAceita.add(getColumn("DIGITOS").getModelIndex());
-			if{
-				return false; // Evita a edicao das celulas.
-			}
-			else
-				return true;
+			Set<Integer> colunaAceita = new HashSet<>();
+			colunaAceita.add(getColumn("ID").getModelIndex());
+			colunaAceita.add(getColumn("NOME").getModelIndex());
+			colunaAceita.add(getColumn("DIGITOS").getModelIndex());
+
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				if (colunaAceita.contains(column)) {
+					return false; // Evita a edição das células.
+				} else {
+					return true;
+				}
 			}
 		};
+
 		tabelaCargos.addMouseListener(tratadorEventos);
 		tabelaCargos.setPreferredScrollableViewportSize(new Dimension(300, 200));
 		tabelaCargos.getColumn("ID").setPreferredWidth(10);
