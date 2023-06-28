@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -69,11 +71,18 @@ public class DialogoConsultarCargo extends JDialog {
 
 		tabelaCargos = new JTable(new DefaultTableModel(dadosTabela, colunasTabela)){
 			private static final long serialVersionUID = 5727320816550514929L;
-			public boolean isCellEditable(int rowIndex, int colIndex) {
-				if (colIndex == getColumn("ID").getModelIndex() || colIndex == getColumn("NOME").getModelIndex() || colIndex == getColumn("DIGITOS").getModelIndex())
-					return false; // Evita a edicao das celulas.
-				else
+			Set<Integer> colunaAceita = new HashSet<>();
+			colunaAceita.add(getColumn("ID").getModelIndex());
+			colunaAceita.add(getColumn("NOME").getModelIndex());
+			colunaAceita.add(getColumn("DIGITOS").getModelIndex());
+
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				if (colunaAceita.contains(column)) {
+					return false; // Evita a edição das células.
+				} else {
 					return true;
+				}
 			}
 		};
 		tabelaCargos.addMouseListener(tratadorEventos);
