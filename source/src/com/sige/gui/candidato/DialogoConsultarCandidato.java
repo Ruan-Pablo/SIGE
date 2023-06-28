@@ -36,6 +36,8 @@ public class DialogoConsultarCandidato extends JDialog {
 	private JButton botaoSair, botaoLimpar;
 	private JTable tabelaCandidatos;
 
+	private static final int TAMANHO_MAXIMO_NUMERO = 35;
+
 	/**
 	 * Este e o construtor. Ele constroi a interface grafica do dialogo consultar candidato. 
 	 * 
@@ -110,7 +112,7 @@ public class DialogoConsultarCandidato extends JDialog {
 			}
 		};
 		tabelaCandidatos.setPreferredScrollableViewportSize(new Dimension(420, 230));
-		tabelaCandidatos.getColumn("Numero").setPreferredWidth(35);
+		tabelaCandidatos.getColumn("Numero").setPreferredWidth(TAMANHO_MAXIMO_NUMERO);
 		tabelaCandidatos.getColumn("Nome").setPreferredWidth(160);
 		tabelaCandidatos.getColumn("Partido").setPreferredWidth(30);
 		tabelaCandidatos.getColumn("Cargo").setPreferredWidth(100);
