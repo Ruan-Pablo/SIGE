@@ -7,6 +7,8 @@ import java.awt.Insets;
 
 import javax.swing.border.AbstractBorder;
 
+import com.sige.gui.ajuda.ParameterShadowBorder;
+
 public class ShadowBorder extends AbstractBorder {
     private static final long serialVersionUID = 1L;
     private static final int RADIUS = 5;
@@ -32,6 +34,8 @@ public class ShadowBorder extends AbstractBorder {
 
     @Override
     public void paintBorder(ParameterShadowBorder parameterShadowBorder){
-        parameterShadowBorder.setGraphics(setColor(Color.RED));
+        Graphics g = parameterShadowBorder.getGraphics();
+        g.setColor(Color.RED);
+        parameterShadowBorder.setGraphics(g)
     }
 }
